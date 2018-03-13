@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <title>Point Blank News</title>
+    <!-- CSS  -->
+    <link href="css/jquery.fullPage.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="ionicons/css/ionicons.min.css" type="text/css" rel="stylesheet"/>
+    <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="css/swiper.css"> -->
+</head>
+<body>
+
+
+
+<div class="pre-loader"></div>
+
+<div class="news-container">
+
+    <div class="top-nav">
+        <a href="javascript:void(0);" id="menu-btn" class="icon leftt"><i class="ion-android-menu"></i></a>
+        <h4>Funding</h4>
+        <a href="javascript:void(0);" onclick="location.reload();" class="icon right"><i class="ion-android-refresh"></i></a>
+    </div>
+
+    <div id="fullpage">
+        <div class="section" id="section1" style="display:none">
+            <div class="swiper-slide">
+                <div class="news-box">
+                    <div class="img-container">
+                        <img src="img/news-bg.jpg">
+                        <div class="bottom-nav">
+                            <h6>6 Minutes ago</h6>
+                            <a href="#" class="icon right"><i class="ion-ios-upload-outline"></i></a>
+                        </div>
+                    </div>
+                    <div class="conent-container">
+                        <h4>Amrita Sher-Gil's self-portrait fetches £1.7 mn</h4>
+
+                        <p>A rare self-portrait of Amrita Sher-Gil, one of India's most prolific painters, fetched £1.7 million in an auction by Sotheby in London. Over £4.9 million was raised during the Modern and Contemporary South Asia Art auction, as part of the Indian Art Week. Works of other Indian artists like Gagendranath Tagore, Gieve Patel and Nasreen Mohamedi were also auctioned.</p>
+                        <div class="con-btm">
+                            <div class="lef">
+                                <img src="http://blogs.economictimes.indiatimes.com/wp-content/uploads/2014/09/Commentary.png">
+                            </div>
+                        </div>
+                        <div class="read">
+                            <a href="#"><i class="ion-more"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu-overlay" id="menu">
+
+    <div class="close"><a href="#" id="close-btn"><i class="ion-close"></i></a></div>
+    <h4>Select Category</h4>
+
+    <div class="menu-icon">
+        <a href="index.html">
+            <img src="img/menu-all.png">
+            <p>All News</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="startups.html">
+            <img src="img/menu-startups.png">
+            <p>Startups</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="news.html">
+            <img src="img/menu-news.png">
+            <p>News</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="funding.html">
+            <img src="img/menu-funding.png">
+            <p>Funding</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="events.html">
+            <img src="img/menu-events.png">
+            <p>Events</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="technology.html">
+            <img src="img/menu-technology.png">
+            <p>Technology</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="science.html">
+            <img src="img/menu-science.png">
+            <p>Science</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="gadgets.html">
+            <img src="img/menu-gadgets.png">
+            <p>Gadgets</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="http://avinay.com/newshots/">
+            <img src="img/menu-more.png">
+            <p>More</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="http://appoets.com">
+            <img src="img/menu-about.png">
+            <p>About</p>
+        </a>
+    </div>
+
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova_plugins.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/smartflow.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script> -->
+<script type="text/javascript" src="js/fundingfeed.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    //localStorage.setItem('gcm',gcm);
+    $(document).ready( function(){
+     });
+    </script>
+<script>
+            function open_this_url(url){
+                var ref = window.open(url, '_blank', 'location=yes');
+            }
+            function error_con(){
+        window.plugins.toast.showLongBottom('Sorry,No internet connection!', 'long', 'center', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+        }
+
+    </script>
+</body>
+</html>

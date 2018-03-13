@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <title>Point Blank News</title>
+    <!-- CSS  -->
+    <link href="css/jquery.fullPage.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="ionicons/css/ionicons.min.css" type="text/css" rel="stylesheet"/>
+    <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'
+          type='text/css'>
+    <!-- <link rel="stylesheet" href="css/swiper.css"> -->
+</head>
+<body>
+
+
+<div class="pre-loader"></div>
+
+<div class="news-container">
+
+    <div class="top-nav">
+        <a href="javascript:void(0);" id="menu-btn" class="icon leftt"><i
+                class="ion-android-menu"></i></a>
+        <h4>Single News</h4>
+        <a href="index.html" class="icon right"><i class="ion-android-home"></i></a>
+
+    </div>
+
+    <div id="fullpage">
+
+
+        <div class="section" id="section1" style="display:none">
+            <div class="swiper-slide">
+                <div class="news-box">
+                    <div class="img-container">
+                        <img src="img/news-bg.jpg">
+
+                        <div class="bottom-nav">
+                            <h6>6 Minutes ago</h6>
+                            <a href="#" class="icon right"><i
+                                    class="ion-ios-upload-outline"></i></a>
+                        </div>
+                    </div>
+                    <div class="conent-container">
+                        <h4>Amrita Sher-Gil's self-portrait fetches £1.7 mn</h4>
+
+                        <p>A rare self-portrait of Amrita Sher-Gil, one of India's most prolific
+                            painters, fetched £1.7 million in an auction by Sotheby in London. Over
+                            £4.9 million was raised during the Modern and Contemporary South Asia
+                            Art auction, as part of the Indian Art Week. Works of other Indian
+                            artists like Gagendranath Tagore, Gieve Patel and Nasreen Mohamedi were
+                            also auctioned.</p>
+
+                        <div class="con-btm">
+                            <div class="lef">
+                                <img src="http://blogs.economictimes.indiatimes.com/wp-content/uploads/2014/09/Commentary.png">
+                            </div>
+                        </div>
+                        <div class="read">
+                            <a href="#"><i class="ion-more"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu-overlay" id="menu">
+
+    <div class="close"><a href="#" id="close-btn"><i class="ion-close"></i></a></div>
+    <h4>Select Category</h4>
+
+    <div class="menu-icon">
+        <a href="index.html">
+            <img src="img/menu-all.png">
+
+            <p>All News</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="startups.html">
+            <img src="img/menu-startups.png">
+
+            <p>Startups</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="news.html">
+            <img src="img/menu-news.png">
+
+            <p>News</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="funding.html">
+            <img src="img/menu-funding.png">
+
+            <p>Funding</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="events.html">
+            <img src="img/menu-events.png">
+
+            <p>Events</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="technology.html">
+            <img src="img/menu-technology.png">
+
+            <p>Technology</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="science.html">
+            <img src="img/menu-science.png">
+
+            <p>Science</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="gadgets.html">
+            <img src="img/menu-gadgets.png">
+
+            <p>Gadgets</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="http://avinay.com/newshots/">
+            <img src="img/menu-more.png">
+
+            <p>More</p>
+        </a>
+    </div>
+
+    <div class="menu-icon">
+        <a href="http://appoets.com">
+            <img src="img/menu-about.png">
+
+            <p>About</p>
+        </a>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova_plugins.js"></script>
+<script type="text/javascript" src="js/singlenews.js"></script>
+
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/smartflow.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script> -->
+
+<script src="js/scripts.js"></script>
+<script>
+    $(document).ready( function(){
+        $.get("http://avinay.com/newshots//singlePost", {
+                id: localStorage.single_id
+
+            }, function(result){
+
+        	if(result.success == true){
+
+        		console.log(result.posts);
+
+        		var inc = 0;
+        		var data_content = "";
+
+        		$(result.posts).each(function(){
+                    var title=result.posts[inc].title;
+                    var modified_title= title.replace(/[^a-z0-9%$&\s]/gi, '');
+                    if(result.posts[inc].publisher_image == ""){
+    		        data_content='<div class="section fp-section fp-table"><div class="fp-tableCell"><div class="swiper-slide"><div class="news-box"><div class="img-container"><img src="'+result.posts[inc].image+'"></div><div class="conent-container"><h4>'+result.posts[inc].title+'</h4><p>'+result.posts[inc].description+'</p><div class="con-btm"><div class="lef"><a class="timestamp" href="#"><span class="more-txt">'+result.posts[inc].time+'</span></a><a class="more" href="javascript:void(0);" onclick="open_this_url(\''+ result.posts[inc].url +'\');"><span class="more-txt">Read more</span></a></div><div class="righ"><span class="share-txt"><a href="javascript:void(0);" onclick="window.plugins.socialsharing.share(\''+modified_title+'   -via PointBlankNews\', null, null, \''+result.posts[inc].share_link+'\')"><i class="ion-android-share"></i> Share</a></span></div></div></div></div></div></div>';
+                    }else{
+                    data_content='<div class="section fp-section fp-table"><div class="fp-tableCell"><div class="swiper-slide"><div class="news-box"><div class="img-container"><img src="'+result.posts[inc].image+'"></div><div class="conent-container"><h4>'+result.posts[inc].title+'</h4><p>'+result.posts[inc].description+'</p><div class="con-btm"><div class="lef"><a class="timestamp" href="#"><span class="more-txt">'+result.posts[inc].time+'</span></a><a class="more" href="javascript:void(0);" onclick="open_this_url(\''+ result.posts[inc].url +'\');"><span class="more-txt">Read more at <span class="pub-txt">'+result.posts[inc].publisher_name+'</span></span></a></div><div class="righ"><span class="share-txt"><a href="javascript:void(0);" onclick="window.plugins.socialsharing.share(\''+modified_title+'   -via PointBlankNews\', null, null, \''+result.posts[inc].share_link+'\')"><i class="ion-android-share"></i> Share</a></span></div></div></div></div></div></div>';
+                    }
+                    console.log('appoets');
+
+                    $('#fullpage').append(data_content);
+        		
+        		});
+
+                var post_count = 1;
+
+    	        $('#fullpage').fullpage({
+
+                    scrollingSpeed: 300,
+                    touchSensitivity: 15,
+                    afterLoad: function(anchorLink, index)
+                    {
+                        var loadedSection = $(this);
+
+                        $('.swiper-slide').css('height', $(window).innerHeight());
+
+                        if(post_count == index)
+                        {
+    	                    $.get("http://avinay.com/newshots//getPostCat",
+    	                    {
+                                category: 0,
+                                take: 0,
+                                skip: post_count
+                            },
+                            function(result)
+                            {
+        	                    if(result.success == true)
+        	                    {
+        	                        $(".pre-loader").fadeIn();
+                                    console.log(result.posts);
+                                    var inc = 0;
+                                    var data_content = "";
+                                    console.log(result.counts);
+                                    $(result.posts).each(function()
+                                    {
+
+    		                           if(result.posts[inc].publisher_image == ""){
+    		        data_content='<div class="section fp-section fp-table"><div class="fp-tableCell"><div class="swiper-slide"><div class="news-box"><div class="img-container"><img src="'+result.posts[inc].image+'"></div><div class="conent-container"><h4>'+result.posts[inc].title+'</h4><p>'+result.posts[inc].description+'</p><div class="con-btm"><div class="lef"><a class="timestamp" href="#"><span class="more-txt">'+result.posts[inc].time+'</span></a><a class="more" href="javascript:void(0);" onclick="open_this_url(\''+ result.posts[inc].url +'\');"><span class="more-txt">Read more at</span></a></div><div class="righ"><span class="share-txt"><a href="javascript:void(0);" onclick="window.plugins.socialsharing.share(\''+result.posts[inc].title+'   -via PointBlankNews\', null, null, \''+result.posts[inc].share_link+'\')"><i class="ion-android-share"></i> Share</a></span></div></div></div></div></div></div>';
+                    }else{
+                    data_content='<div class="section fp-section fp-table"><div class="fp-tableCell"><div class="swiper-slide"><div class="news-box"><div class="img-container"><img src="'+result.posts[inc].image+'"></div><div class="conent-container"><h4>'+result.posts[inc].title+'</h4><p>'+result.posts[inc].description+'</p><div class="con-btm"><div class="lef"><a class="timestamp" href="#"><span class="more-txt">'+result.posts[inc].time+'</span></a><a class="more" href="javascript:void(0);" onclick="open_this_url(\''+ result.posts[inc].url +'\');"><span class="more-txt">Read more at</span><img src="'+result.posts[inc].publisher_image+'"></a></div><div class="righ"><span class="share-txt"><a href="javascript:void(0);" onclick="window.plugins.socialsharing.share(\''+result.posts[inc].title+'   -via PointBlankNews\', null, null, \''+result.posts[inc].share_link+'\')"><i class="ion-android-share"></i> Share</a></span></div></div></div></div></div></div>';
+                    }
+                                        $('#fullpage').append(data_content);
+                                        //inc++;
+                                    });
+
+                                    $(".pre-loader").fadeOut();
+
+                                    post_count = post_count + 0;
+        	                    }
+    	                    });
+    	                }
+                    }
+                });
+        	}
+	   });
+
+        $("#menu").hide();
+
+    	$("#menu-btn").click(function(){
+    	    $("#menu").show( "scale", 100 );
+    	});
+
+    	$("#close-btn").click(function(){
+    	    $("#menu").hide( "scale", 100 );
+    	});
+
+    });
+
+</script>
+
+<script>
+
+    function open_this_url(url){
+        var ref = window.open(url, '_blank', 'location=yes');
+    }
+     function error_con(){
+        window.plugins.toast.showLongBottom('Sorry,No internet connection!', 'long', 'center', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+        }
+
+</script>
+
+
+</body>
+</html>
